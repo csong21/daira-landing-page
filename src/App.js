@@ -98,61 +98,26 @@ function Hero() {
                 <div 
                   className="flex items-center gap-6"
                   style={{
-                    animation: 'slide 20s linear infinite',
-                    width: 'calc(200%)'
+                    animation: 'scroll 25s linear infinite',
+                    width: 'max-content'
                   }}
                 >
-                  {/* First set of logos */}
-                  <div className="w-12 h-12 bg-green-600 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">XL</span>
-                  </div>
-                  <div className="w-12 h-12 bg-green-500 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">GS</span>
-                  </div>
-                  <div className="w-12 h-12 bg-blue-600 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">EZ</span>
-                  </div>
-                  <div className="w-12 h-12 bg-purple-600 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">1M</span>
-                  </div>
-                  <div className="w-12 h-12 bg-orange-500 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">DC</span>
-                  </div>
-                  <div className="w-12 h-12 bg-blue-500 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">QB</span>
-                  </div>
-                  <div className="w-12 h-12 bg-red-500 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">SF</span>
-                  </div>
-                  <div className="w-12 h-12 bg-indigo-600 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">ZP</span>
-                  </div>
-                  
-                  {/* Duplicate set for seamless loop */}
-                  <div className="w-12 h-12 bg-green-600 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">XL</span>
-                  </div>
-                  <div className="w-12 h-12 bg-green-500 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">GS</span>
-                  </div>
-                  <div className="w-12 h-12 bg-blue-600 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">EZ</span>
-                  </div>
-                  <div className="w-12 h-12 bg-purple-600 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">1M</span>
-                  </div>
-                  <div className="w-12 h-12 bg-orange-500 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">DC</span>
-                  </div>
-                  <div className="w-12 h-12 bg-blue-500 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">QB</span>
-                  </div>
-                  <div className="w-12 h-12 bg-red-500 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">SF</span>
-                  </div>
-                  <div className="w-12 h-12 bg-indigo-600 rounded flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-xs font-bold">ZP</span>
-                  </div>
+                  {/* All companies repeated 3 times for smooth loop */}
+                  {['DairyComp', 'EZfeed', 'FeedWatch', 'One by milc group', 'DFA', 'Hilmar', 'Milk Moovement', 'Land O\'Lakes'].map((company, index) => (
+                    <div key={`set1-${index}`} className="bg-white border border-gray-200 rounded-lg px-4 py-3 flex items-center justify-center flex-shrink-0 shadow-sm min-w-[120px]">
+                      <span className="text-gray-700 text-sm font-semibold">{company}</span>
+                    </div>
+                  ))}
+                  {['DairyComp', 'EZfeed', 'FeedWatch', 'One by milc group', 'DFA', 'Hilmar', 'Milk Moovement', 'Land O\'Lakes'].map((company, index) => (
+                    <div key={`set2-${index}`} className="bg-white border border-gray-200 rounded-lg px-4 py-3 flex items-center justify-center flex-shrink-0 shadow-sm min-w-[120px]">
+                      <span className="text-gray-700 text-sm font-semibold">{company}</span>
+                    </div>
+                  ))}
+                  {['DairyComp', 'EZfeed', 'FeedWatch', 'One by milc group', 'DFA', 'Hilmar', 'Milk Moovement', 'Land O\'Lakes'].map((company, index) => (
+                    <div key={`set3-${index}`} className="bg-white border border-gray-200 rounded-lg px-4 py-3 flex items-center justify-center flex-shrink-0 shadow-sm min-w-[120px]">
+                      <span className="text-gray-700 text-sm font-semibold">{company}</span>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -160,12 +125,12 @@ function Hero() {
           
           {/* CSS Animation */}
           <style jsx>{`
-            @keyframes slide {
+            @keyframes scroll {
               0% {
                 transform: translateX(0);
               }
               100% {
-                transform: translateX(-50%);
+                transform: translateX(calc(-100% / 3));
               }
             }
           `}</style>
