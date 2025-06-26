@@ -825,6 +825,32 @@ function Contact() {
   )
 }
 
+// Footer Section
+function Footer() {
+  return (
+    <footer className="bg-gray-900 py-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center">
+          <div className="flex items-center justify-center space-x-2 mb-4">
+            {/* Same logo as header */}
+            <div className="flex items-end space-x-1">
+              <div className="w-2 h-4 bg-gradient-to-t from-blue-600 to-blue-400 rounded-sm"></div>
+              <div className="w-2 h-6 bg-gradient-to-t from-teal-600 to-teal-400 rounded-sm"></div>
+              <div className="w-2 h-3 bg-gradient-to-t from-blue-500 to-blue-300 rounded-sm"></div>
+            </div>
+            <div className="text-xl font-bold bg-gradient-to-r from-blue-600 to-teal-500 bg-clip-text text-transparent tracking-wide">
+              Daira
+            </div>
+          </div>
+          <p className="text-gray-400 text-sm">
+            © 2025 Daira. All rights reserved.
+          </p>
+        </div>
+      </div>
+    </footer>
+  )
+}
+
 // Main Component
 export default function DairyLandingPage() {
   return (
@@ -836,6 +862,7 @@ export default function DairyLandingPage() {
       <DataStandardizationProcess />
       <FAQ />
       <Contact />
+      <Footer />
     </div>
   )
 }
