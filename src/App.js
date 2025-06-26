@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { ArrowRight, CheckCircle, Shield, Clock, Database, BarChart3, Users, ChevronRight, Sparkles } from 'lucide-react'
 
+
 // Header/Navigation
 function Header() {
   const scrollToContact = () => {
@@ -654,25 +655,38 @@ function Contact() {
     name: '',
     email: '',
     company: '',
-    message: ''
+    farms: '',
+    herds: '',
+    challenge: '',
+    demo: ''
   })
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
     if (!formData.name || !formData.email) {
       alert('Please fill in your name and email');
       return;
     }
     
-    console.log('Form submitted:', formData)
-    alert('Thank you! We\'ll contact you within 24 hours to get you started.')
-    
-    setFormData({
-      name: '',
-      email: '',
-      company: '',
-      message: ''
-    });
+    try {
+      const response = await fetch('https://formspree.io/f/xgvypgne', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(formData)
+      });
+      
+      if (response.ok) {
+        alert('Thank you! We\'ll contact you within 24 hours.');
+        setFormData({
+          name: '', email: '', company: '', farms: '', herds: '', challenge: '', demo: ''
+        });
+      }
+    } catch (error) {
+      alert('Something went wrong. Please try again.');
+    }
   }
+  
 
   const handleChange = (e) => {
     setFormData({
@@ -685,10 +699,10 @@ function Contact() {
     <section id="contact" className="py-20" style={{backgroundColor: '#01abaa'}}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-4xl font-bold text-white mb-4">
-          Ready to transform your dairy operation?
+          Ready to Automate Your Dairy Reporting?
         </h2>
         <p className="text-xl mb-12" style={{color: '#b3e6e6'}}>
-          Get started with Daira today and join hundreds of dairy operations who depend on our platform.
+          Stay ahead of the data curve. Let Daira handle the grunt work.
         </p>
         
         <div className="bg-white rounded-2xl p-8 max-w-2xl mx-auto text-left">
@@ -732,18 +746,65 @@ function Contact() {
                 placeholder="Farm or company name"
               />
             </div>
-            
+
             <div>
-              <label className="block text-sm font-medium text-gray-700 mb-2">Tell us about your operation</label>
-              <textarea
-                name="message"
-                rows={4}
-                value={formData.message}
+              <label className="block text-sm font-medium text-gray-700 mb-2">How many farms do you currently work with?</label>
+              <select
+                name="farms"
+                value={formData.farms}
                 onChange={handleChange}
-                placeholder="Tell us about your herd size, current challenges, or what you're looking to improve..."
                 className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent"
                 style={{'--tw-ring-color': '#01abaa'}}
-              ></textarea>
+              >
+                <option value="">Select number of farms</option>
+                <option value="1-5">1–5</option>
+                <option value="6-10">6–10</option>
+                <option value="11-20">11–20</option>
+                <option value="21-30">21–30</option>
+                <option value="30+">30+</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">How many total herds or groups are you managing across those farms?</label>
+              <input
+                type="text"
+                name="herds"
+                value={formData.herds}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent"
+                style={{'--tw-ring-color': '#01abaa'}}
+                placeholder="e.g., 15 herds"
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">What's your biggest data challenge right now?</label>
+              <input
+                type="text"
+                name="challenge"
+                value={formData.challenge}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent"
+                style={{'--tw-ring-color': '#01abaa'}}
+                placeholder="e.g., Consolidating data from multiple farms, Manual reporting takes too long..."
+              />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">Would you like a free data audit or demo?</label>
+              <select
+                name="demo"
+                value={formData.demo}
+                onChange={handleChange}
+                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:border-transparent"
+                style={{'--tw-ring-color': '#01abaa'}}
+              >
+                <option value="">Select an option</option>
+                <option value="yes">Yes</option>
+                <option value="maybe">Maybe</option>
+                <option value="no">No thanks</option>
+              </select>
             </div>
             
             <button
