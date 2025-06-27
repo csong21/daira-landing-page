@@ -360,7 +360,7 @@ function ImagePlaceholder() {
         {/* Image */}
         <div className="flex justify-center">
           <img 
-            src="//integration-diagram.png" 
+            src="/integration-diagram.png" 
             alt="Integration diagram" 
             className="w-full max-w-4xl h-auto rounded-lg shadow-lg"
           />
