@@ -341,14 +341,29 @@ function ValueProps() {
 // Image Placeholder Section
 function ImagePlaceholder() {
   return (
-    <section className="bg-gray-50 py-16">
+    <section className="bg-gray-50 py-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-16">
+          <h2 className="text-4xl font-bold mb-4">
+            <span className="text-gray-900">Connect all your data sources to</span>
+            <br />
+            <span className="text-blue-600">one unified platform</span>
+          </h2>
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            Daira automatically integrates with your existing systems to create a single source of truth
+          </p>
+        </div>
+
+        {/* Image */}
         <div className="bg-white rounded-xl p-8 shadow-sm border-2 border-dashed border-gray-300 text-center">
-          <img 
-            src="./your-image-filename.jpg" 
-            alt="Integration diagram" 
-            className="w-full h-auto rounded-lg"
-          />
+          <div className="w-full h-96 bg-gray-100 rounded-lg flex items-center justify-center">
+            <img 
+              src="/your-image-filename.jpg" 
+              alt="Integration diagram" 
+              className="w-full h-auto rounded-lg"
+            />
+          </div>
         </div>
       </div>
     </section>
