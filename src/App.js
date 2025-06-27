@@ -429,8 +429,8 @@ function FAQ() {
       answer: "Daira can be fully implemented in 12 weeks or less, regardless of your current data setup. Our team handles the technical integration while your dairy team focuses on defining the metrics that matter most."
     },
     {
-      question: "How is Daira different from general farm management tools?",
-      answer: "Unlike general-purpose farm software, Daira is purpose-built for dairy operations. Farm management tools like DairyComp require specialized data talent to structure your data and implement reporting. Our goal is for dairy teams to be totally self-sufficient with analytics, without any dependency on data or IT teams."
+      question: "How is Daira different from other data management tools?",
+      answer: "Unlike other data platform, Daira is customer-centric and purpose-built for each dairy consultancy. We customize database, workflows, dashboards to meet your needs."
     },
     {
       question: "Do I need data engineering resources to use Daira?",
@@ -438,7 +438,7 @@ function FAQ() {
     },
     {
       question: "What systems does Daira connect to?",
-      answer: "Daira connects directly to your existing systems—milk testing labs, feed management software, breeding records, accounting software, spreadsheets, and more—to create a unified data model where dairy and operational metrics work together seamlessly."
+      answer: "Daira connects directly to your existing systems—herd management software, feed software, milk processors, accounting software, spreadsheets, and more —to create a unified data model where herd, performance and operational metrics work together seamlessly."
     }
   ];
 
