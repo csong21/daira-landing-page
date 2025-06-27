@@ -338,13 +338,15 @@ function ValueProps() {
   )
 }
 
+
+
 // Image Placeholder Section
 function ImagePlaceholder() {
   return (
     <section className="bg-gray-50 py-20">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <h2 className="text-4xl font-bold mb-4">
             <span className="text-gray-900">Connect all your data sources to</span>
             <br />
@@ -356,14 +358,12 @@ function ImagePlaceholder() {
         </div>
 
         {/* Image */}
-        <div className="bg-white rounded-xl p-8 shadow-sm border-2 border-dashed border-gray-300 text-center">
-          <div className="w-full h-96 bg-gray-100 rounded-lg flex items-center justify-center">
-            <img 
-              src="/integration-diagram.png" 
-              alt="Integration diagram" 
-              className="w-full h-auto rounded-lg"
-            />
-          </div>
+        <div className="flex justify-center">
+          <img 
+            src="//integration-diagram.png" 
+            alt="Integration diagram" 
+            className="w-full max-w-4xl h-auto rounded-lg shadow-lg"
+          />
         </div>
       </div>
     </section>
@@ -690,10 +690,10 @@ export default function DairyLandingPage() {
     <div className="min-h-screen">
       <Header />
       <Hero />
-      <DataSourcesShowcase />
-      <ValueProps />
       <ImagePlaceholder />
       <StatisticsSection />
+      <ValueProps />
+      <DataSourcesShowcase />
       <FAQ />
       <Contact />
       <Footer />
