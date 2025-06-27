@@ -359,7 +359,7 @@ function ImagePlaceholder() {
         <div className="bg-white rounded-xl p-8 shadow-sm border-2 border-dashed border-gray-300 text-center">
           <div className="w-full h-96 bg-gray-100 rounded-lg flex items-center justify-center">
             <img 
-              src="/your-image-filename.jpg" 
+              src="/integration_diagram.png" 
               alt="Integration diagram" 
               className="w-full h-auto rounded-lg"
             />
