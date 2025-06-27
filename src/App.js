@@ -338,175 +338,28 @@ function ValueProps() {
   )
 }
 
-// Data Standardization Process Section
-function DataStandardizationProcess() {
+// Image Placeholder Section
+function ImagePlaceholder() {
   return (
-    <section className="bg-gray-50 py-20">
+    <section className="bg-gray-50 py-16">
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4">
-            <span className="text-gray-900">Connect all your data sources to</span>
-            <br />
-            <span className="text-blue-600">one unified platform</span>
-          </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Daira automatically integrates with your existing systems to create a single source of truth
-          </p>
+        <div className="bg-white rounded-xl p-8 shadow-sm border-2 border-dashed border-gray-300 text-center">
+          <img 
+            src="./your-image-filename.jpg" 
+            alt="Integration diagram" 
+            className="w-full h-auto rounded-lg"
+          />
         </div>
+      </div>
+    </section>
+  )
+}
 
-        {/* Integration Hub Diagram */}
-        <div className="relative flex justify-center mb-16">
-          <div className="relative w-full max-w-4xl h-96">
-            
-            {/* Central Dashboard */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-20">
-              <div className="w-80 h-56 bg-white rounded-xl shadow-xl border-2 border-blue-200 p-4">
-                {/* Mock dashboard header */}
-                <div className="flex items-center justify-between mb-3">
-                  <span className="text-sm font-semibold text-gray-700">Daira Dashboard</span>
-                  <div className="flex space-x-1">
-                    <div className="w-2 h-2 bg-green-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
-                    <div className="w-2 h-2 bg-red-400 rounded-full"></div>
-                  </div>
-                </div>
-                
-                {/* Mock data rows */}
-                <div className="space-y-2 text-xs">
-                  <div className="grid grid-cols-4 gap-2 bg-gray-50 p-1 rounded">
-                    <span className="font-medium">Farm</span>
-                    <span className="font-medium">Milk Yield</span>
-                    <span className="font-medium">SCC</span>
-                    <span className="font-medium">Feed Cost</span>
-                  </div>
-                  <div className="grid grid-cols-4 gap-2 p-1">
-                    <span>Valley Farm</span>
-                    <span className="text-green-600">85.2 lbs</span>
-                    <span>145K</span>
-                    <span>$0.23/lb</span>
-                  </div>
-                  <div className="grid grid-cols-4 gap-2 p-1">
-                    <span>Hill Dairy</span>
-                    <span className="text-green-600">78.9 lbs</span>
-                    <span>167K</span>
-                    <span>$0.25/lb</span>
-                  </div>
-                  <div className="grid grid-cols-4 gap-2 p-1">
-                    <span>Creek Ranch</span>
-                    <span className="text-blue-600">92.1 lbs</span>
-                    <span>123K</span>
-                    <span>$0.21/lb</span>
-                  </div>
-                </div>
-                
-                {/* Mock chart area */}
-                <div className="mt-3 h-12 bg-gradient-to-r from-blue-100 via-green-100 to-teal-100 rounded flex items-end justify-center space-x-1">
-                  <div className="w-3 h-8 bg-blue-400 rounded-t"></div>
-                  <div className="w-3 h-6 bg-green-400 rounded-t"></div>
-                  <div className="w-3 h-10 bg-teal-400 rounded-t"></div>
-                  <div className="w-3 h-7 bg-blue-400 rounded-t"></div>
-                  <div className="w-3 h-9 bg-green-400 rounded-t"></div>
-                </div>
-              </div>
-            </div>
-
-            {/* Data Source Icons positioned around the dashboard */}
-            
-            {/* Top Left - Farm Management */}
-            <div className="absolute top-8 left-8">
-              <div className="w-16 h-16 bg-white rounded-lg shadow-md border-2 border-green-200 flex items-center justify-center">
-                <span className="text-xs font-bold text-green-600">FARM<br/>MGMT</span>
-              </div>
-            </div>
-
-            {/* Top - Milk Testing */}
-            <div className="absolute top-0 left-1/2 transform -translate-x-1/2">
-              <div className="w-16 h-16 bg-white rounded-lg shadow-md border-2 border-blue-200 flex items-center justify-center">
-                <span className="text-xs font-bold text-blue-600">MILK<br/>TEST</span>
-              </div>
-            </div>
-
-            {/* Top Right - Feed Data */}
-            <div className="absolute top-8 right-8">
-              <div className="w-16 h-16 bg-white rounded-lg shadow-md border-2 border-orange-200 flex items-center justify-center">
-                <span className="text-xs font-bold text-orange-600">FEED<br/>DATA</span>
-              </div>
-            </div>
-
-            {/* Right - Financial */}
-            <div className="absolute top-1/2 right-0 transform -translate-y-1/2">
-              <div className="w-16 h-16 bg-white rounded-lg shadow-md border-2 border-purple-200 flex items-center justify-center">
-                <span className="text-xs font-bold text-purple-600">FINANCE</span>
-              </div>
-            </div>
-
-            {/* Bottom Right - Breeding */}
-            <div className="absolute bottom-8 right-8">
-              <div className="w-16 h-16 bg-white rounded-lg shadow-md border-2 border-pink-200 flex items-center justify-center">
-                <span className="text-xs font-bold text-pink-600">BREED<br/>DATA</span>
-              </div>
-            </div>
-
-            {/* Bottom - Sensors */}
-            <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
-              <div className="w-16 h-16 bg-white rounded-lg shadow-md border-2 border-teal-200 flex items-center justify-center">
-                <span className="text-xs font-bold text-teal-600">SENSORS</span>
-              </div>
-            </div>
-
-            {/* Bottom Left - Spreadsheets */}
-            <div className="absolute bottom-8 left-8">
-              <div className="w-16 h-16 bg-white rounded-lg shadow-md border-2 border-gray-300 flex items-center justify-center">
-                <span className="text-xs font-bold text-gray-600">EXCEL</span>
-              </div>
-            </div>
-
-            {/* Left - Weather */}
-            <div className="absolute top-1/2 left-0 transform -translate-y-1/2">
-              <div className="w-16 h-16 bg-white rounded-lg shadow-md border-2 border-sky-200 flex items-center justify-center">
-                <span className="text-xs font-bold text-sky-600">WEATHER</span>
-              </div>
-            </div>
-
-            {/* Connecting lines */}
-            <svg className="absolute inset-0 w-full h-full pointer-events-none" style={{zIndex: 10}}>
-              <defs>
-                <marker id="arrowhead-hub" markerWidth="8" markerHeight="6" 
-                        refX="7" refY="3" orient="auto">
-                  <polygon points="0 0, 8 3, 0 6" fill="#3b82f6" />
-                </marker>
-              </defs>
-              
-              {/* Lines from each source to center - adjusted coordinates */}
-              {/* Top Left - Farm Management to center */}
-              <line x1="72" y1="72" x2="180" y2="160" stroke="#3b82f6" strokeWidth="2" markerEnd="url(#arrowhead-hub)" />
-              
-              {/* Top - Milk Testing to center */}
-              <line x1="200" y1="64" x2="200" y2="140" stroke="#3b82f6" strokeWidth="2" markerEnd="url(#arrowhead-hub)" />
-              
-              {/* Top Right - Feed Data to center */}
-              <line x1="328" y1="72" x2="220" y2="160" stroke="#3b82f6" strokeWidth="2" markerEnd="url(#arrowhead-hub)" />
-              
-              {/* Right - Financial to center */}
-              <line x1="336" y1="192" x2="280" y2="192" stroke="#3b82f6" strokeWidth="2" markerEnd="url(#arrowhead-hub)" />
-              
-              {/* Bottom Right - Breeding to center */}
-              <line x1="328" y1="312" x2="220" y2="224" stroke="#3b82f6" strokeWidth="2" markerEnd="url(#arrowhead-hub)" />
-              
-              {/* Bottom - Sensors to center */}
-              <line x1="200" y1="320" x2="200" y2="244" stroke="#3b82f6" strokeWidth="2" markerEnd="url(#arrowhead-hub)" />
-              
-              {/* Bottom Left - Excel to center */}
-              <line x1="72" y1="312" x2="180" y2="224" stroke="#3b82f6" strokeWidth="2" markerEnd="url(#arrowhead-hub)" />
-              
-              {/* Left - Weather to center */}
-              <line x1="64" y1="192" x2="120" y2="192" stroke="#3b82f6" strokeWidth="2" markerEnd="url(#arrowhead-hub)" />
-            </svg>
-          </div>
-        </div>
-
-        {/* Bottom Statistics */}
+// Statistics Section
+function StatisticsSection() {
+  return (
+    <section className="bg-gray-50 py-16">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
           <div className="bg-white rounded-xl p-6 shadow-sm">
             <div className="text-3xl font-bold text-blue-600 mb-2">99%</div>
@@ -824,7 +677,8 @@ export default function DairyLandingPage() {
       <Hero />
       <DataSourcesShowcase />
       <ValueProps />
-      <DataStandardizationProcess />
+      <ImagePlaceholder />
+      <StatisticsSection />
       <FAQ />
       <Contact />
       <Footer />
